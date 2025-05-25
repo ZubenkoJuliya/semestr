@@ -8,7 +8,7 @@ class Logger:
         self._ensure_logs_dir_exists()
 
     def _ensure_logs_dir_exists(self):
-        """Создает директорию для логов, если она не существует"""
+        #Создает директорию для логов, если она не существует
         try:
             if not os.path.exists(LOGS_DIR):
                 os.makedirs(LOGS_DIR)
@@ -17,14 +17,14 @@ class Logger:
             print(f"Ошибка при создании директории логов: {e}")
 
     def log_message(self, user_id: int, username: str, message: str, is_bot: bool = False):
-        """
-        Логирует сообщение в файл пользователя
 
-        :param user_id: ID пользователя в Telegram
-        :param username: имя пользователя
-        :param message: текст сообщения
-        :param is_bot: True, если сообщение от бота, False - от пользователя
-        """
+        #Логирует сообщение в файл пользователя
+
+        #:param user_id: ID пользователя в Telegram
+        #:param username: имя пользователя
+        #:param message: текст сообщения
+        #:param is_bot: True, если сообщение от бота, False - от пользователя
+
         try:
             # Создаем имя файла лога
             log_file = os.path.join(LOGS_DIR, f"{user_id}.log")
